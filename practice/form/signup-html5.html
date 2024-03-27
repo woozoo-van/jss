@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+</head>
+<body>
+    <header>
+        <h1>회원가입</h1>
+    </header>
+    <section>
+        <form>
+            <input type="text" placeholder="이름을 입력하세요." v-model="suName"
+            required minlength="2" maxlength="20">
+            <div>
+                <button>휴대폰 인증하기</button>
+                <input type="text" placeholder="인증번호를 입력하세요" v-model=""
+                required minlength="6" maxlength="6">
+                <button>휴대폰 인증번호확인</button>
+            </div>
+            <div>
+                <input placeholder="비밀번호를 입력하세요" class="suPassword" 
+                required minlength="8" maxlength="20">
+                <input placeholder="비밀번호를 확인하세요" class="suPasswordCheck"
+                required minlength="8" maxlength="20">
+                <span class="suPasswordCheckMessage" v-if="suPasswordCheckMessage"></span>
+                <span class="suPasswordCheckMessage" v-else="suPasswordCheckMessage">비밀번호를 확인해 주세요</span>
+            </div>
+            <fieldset>
+                <legend>저에게 돈을 주겠습니까?</legend>
+                <label><input type="radio" name="radio1" value="true" />동의합니다.</label>
+                <label><input type="radio" name="radio1" value="false" />동의하지 않습니다.</label>
+            </fieldset>
+            <fieldset>
+                <legend>저에게 선물을 주겠습니까?</legend>
+                <label><input type="radio" name="radio1" value="true" />동의합니다.</label>
+                <label><input type="radio" name="radio1" value="false" />동의하지 않습니다.</label>
+            </fieldset>
+            <fieldset>
+                <legend>저에게 복을 주겠습니까?</legend>
+                <label><input type="radio" name="radio1" value="true" />동의합니다.</label>
+                <label><input type="radio" name="radio1" value="false" />동의하지 않습니다.</label>
+            </fieldset>
+            <submit>가입하기</submit>
+        </form>
+    </section>
+</body>
+</html>
+
+<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form -->
